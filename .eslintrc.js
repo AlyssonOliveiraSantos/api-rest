@@ -1,13 +1,17 @@
 module.exports = {
   env: {
-    browser: true,
-    es2021: true,
+    es6: true,
+    node: true,
   },
-  extends: 'airbnb-base',
-  overrides: [
+  extends: [
+    'airbnb-base',
   ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 2018,
     sourceType: 'module',
   },
   rules: {
@@ -16,5 +20,7 @@ module.exports = {
     'linebreak-style': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-unused-vars': 'off',
+    'import/first': 'off',
+    'import/newline-after-import': 'off',
   },
 };
