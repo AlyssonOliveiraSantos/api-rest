@@ -22,5 +22,6 @@ module.exports = {
     'no-unused-vars': 'off',
     'import/first': 'off',
     'import/newline-after-import': 'off',
+    'no-param-reassign': 'off',
   },
 };
