@@ -23,5 +23,6 @@ module.exports = {
     'import/first': 'off',
     'import/newline-after-import': 'off',
     'no-param-reassign': 'off',
+    'consistent-return': 'off',
   },
 };
