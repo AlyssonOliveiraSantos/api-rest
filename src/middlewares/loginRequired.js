@@ -4,7 +4,7 @@ import User from '../models/User';
 export default async (req, res, next) => {
   const { autorization } = req.headers;
   if (!autorization) {
-    res.status(401).json({
+    return res.status(401).json({
       errors: ['Login required'],
     });
   }
@@ -23,7 +23,7 @@ export default async (req, res, next) => {
     });
 
     if (!user) {
-      res.status(404).json({
+      return res.status(404).json({
         errors: ['Usuario invalido'],
       });
     }
